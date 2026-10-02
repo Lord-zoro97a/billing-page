@@ -1,0 +1,586 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact & Security - LORD ZORO</title>
+  <meta name="description" content="LORD ZORO billing, customer support, contact information and payment security details.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Inter", sans-serif;
+      color: #ffffff;
+      background:
+        radial-gradient(circle at 10% 0%, #3b146d 0%, transparent 35%),
+        radial-gradient(circle at 90% 10%, #171f5c 0%, transparent 30%),
+        linear-gradient(135deg, #090313, #130622 50%, #08030f);
+      padding: 30px 16px;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    .hero {
+      text-align: center;
+      padding: 35px 20px;
+      margin-bottom: 20px;
+      background: rgba(255, 255, 255, 0.055);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 28px;
+      backdrop-filter: blur(18px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    .logo-ring {
+      width: 125px;
+      height: 125px;
+      margin: 0 auto 20px;
+      padding: 4px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #49a9ff, #7b4dff, #49a9ff);
+      animation: spin 5s linear infinite;
+      box-shadow: 0 0 35px rgba(73, 169, 255, 0.3);
+    }
+
+    .logo {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #10051c;
+      animation: spinReverse 5s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spinReverse {
+      to {
+        transform: rotate(-360deg);
+      }
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      color: #bdb4ca;
+      font-size: 14px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    /* CARDS */
+
+    .card {
+      margin-top: 18px;
+      padding: 26px;
+      background: rgba(255, 255, 255, 0.055);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 22px;
+      backdrop-filter: blur(16px);
+    }
+
+    .card h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      margin: 20px 0 6px;
+    }
+
+    .card p {
+      color: #c5bdcf;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    /* CONTACT */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .contact-box {
+      display: block;
+      text-decoration: none;
+      color: white;
+      padding: 20px;
+      border-radius: 17px;
+      background: rgba(255, 255, 255, 0.065);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      transition: 0.25s ease;
+    }
+
+    .contact-box:hover {
+      transform: translateY(-3px);
+      background: rgba(255, 255, 255, 0.11);
+      border-color: rgba(90, 170, 255, 0.35);
+    }
+
+    .contact-icon {
+      font-size: 27px;
+      margin-bottom: 8px;
+    }
+
+    .contact-title {
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .contact-value {
+      color: #aaa1b7;
+      font-size: 13px;
+      margin-top: 3px;
+      word-break: break-word;
+    }
+
+    /* SECURITY */
+
+    .security-list {
+      list-style: none;
+      margin-top: 16px;
+    }
+
+    .security-list li {
+      position: relative;
+      padding: 12px 12px 12px 38px;
+      margin-bottom: 8px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.035);
+      color: #c8c0d1;
+      font-size: 14px;
+    }
+
+    .security-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 13px;
+      top: 11px;
+      color: #63b7ff;
+      font-weight: 800;
+    }
+
+    .notice {
+      margin-top: 18px;
+      padding: 15px;
+      border-left: 3px solid #5ea9ff;
+      border-radius: 10px;
+      background: rgba(70, 150, 255, 0.07);
+      color: #c9c1d2;
+      font-size: 13px;
+    }
+
+    /* LINKS */
+
+    .policy-links {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .policy-links a {
+      text-decoration: none;
+      text-align: center;
+      color: #a9d5ff;
+      padding: 13px 8px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      font-size: 13px;
+      transition: 0.2s;
+    }
+
+    .policy-links a:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* FOOTER */
+
+    footer {
+      text-align: center;
+      padding: 30px 10px 10px;
+      color: #777080;
+      font-size: 12px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 10px;
+      color: #8fc9ff;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .back:hover {
+      text-decoration: underline;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 650px) {
+      body {
+        padding: 18px 12px;
+      }
+
+      .hero {
+        padding: 28px 17px;
+      }
+
+      h1 {
+        font-size: 27px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .policy-links {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <!-- Change logo.png if your logo has a different filename -->
+      <div class="logo-ring">
+        <img src="logo.png" alt="LORD ZORO Logo" class="logo">
+      </div>
+
+      <h1>LORD ZORO</h1>
+
+      <p>
+        Billing, Customer Support & Payment Information
+      </p>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="card">
+
+      <h2>Contact & Customer Support</h2>
+
+      <p>
+        If you have questions regarding billing, payments, orders,
+        transactions, services, refunds, or any other issue related
+        to LORD ZORO, you can contact us through the channels below.
+      </p>
+
+      <div class="contact-grid">
+
+        <!-- EMAIL -->
+
+        <a
+          class="contact-box"
+          href="mailto:zoro97a@gmail.com"
+        >
+          <div class="contact-icon">📧</div>
+
+          <div class="contact-title">
+            Email Support
+          </div>
+
+          <div class="contact-value">
+            zoro97a@gmail.com
+          </div>
+        </a>
+
+
+        <!-- TELEGRAM -->
+
+        <a
+          class="contact-box"
+          href="https://t.me/LORD_X_ZORO"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="contact-icon">✈️</div>
+
+          <div class="contact-title">
+            Telegram Support
+          </div>
+
+          <div class="contact-value">
+            @LORD_X_ZORO
+          </div>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="card">
+
+      <h2>About LORD ZORO Billing</h2>
+
+      <p>
+        LORD ZORO provides an online billing and payment interface
+        designed to make payments and billing-related interactions
+        simple and convenient for our customers.
+      </p>
+
+      <p>
+        Customers may use the billing page to review the applicable
+        payment information and proceed with an available payment
+        method through the payment service provided at checkout.
+      </p>
+
+      <p>
+        Our billing page is designed to provide a clear and secure
+        experience while keeping payment processing separate from
+        the main website interface.
+      </p>
+
+    </section>
+
+
+    <!-- PAYMENT SECURITY -->
+
+    <section class="card">
+
+      <h2>🔐 Payment Security</h2>
+
+      <p>
+        Protecting customer payment information is important to us.
+        LORD ZORO uses third-party payment processing services to
+        process online payments rather than handling sensitive
+        card information directly through the public billing page.
+      </p>
+
+      <ul class="security-list">
+
+        <li>
+          Payments are processed through the payment gateway available
+          at checkout.
+        </li>
+
+        <li>
+          Sensitive payment credentials such as card numbers and
+          banking authentication information are not intended to be
+          collected through our public contact page.
+        </li>
+
+        <li>
+          Payment processing is handled by the applicable payment
+          service provider according to its security procedures.
+        </li>
+
+        <li>
+          Server-side payment credentials and API secrets are kept
+          separate from browser-side public website code.
+        </li>
+
+        <li>
+          Our website is hosted using HTTPS-enabled infrastructure,
+          helping protect information transmitted between your browser
+          and the website.
+        </li>
+
+        <li>
+          Customers should always verify that they are using the
+          official LORD ZORO website before entering payment or
+          personal information.
+        </li>
+
+      </ul>
+
+      <div class="notice">
+        <strong>Security notice:</strong>
+        LORD ZORO will never ask you to send your full card number,
+        CVV, UPI PIN, OTP, banking password, or payment authentication
+        credentials through Telegram or email.
+      </div>
+
+    </section>
+
+
+    <!-- BILLING SUPPORT -->
+
+    <section class="card">
+
+      <h2>💳 Billing & Payment Support</h2>
+
+      <h3>Payment completed but service not received?</h3>
+
+      <p>
+        Contact us using the email address or Telegram account above.
+        Please provide your payment reference or transaction details
+        where appropriate so that we can investigate the issue.
+      </p>
+
+      <h3>Payment failed?</h3>
+
+      <p>
+        If your payment was unsuccessful, check the payment status
+        shown by the payment provider and try again if necessary.
+        If money was deducted but the transaction did not complete,
+        contact us with the relevant transaction information.
+      </p>
+
+      <h3>Duplicate payment?</h3>
+
+      <p>
+        If you believe you have accidentally made a duplicate payment,
+        contact our support team with the relevant transaction
+        references so the payment can be reviewed.
+      </p>
+
+    </section>
+
+
+    <!-- PRIVACY -->
+
+    <section class="card">
+
+      <h2>🛡️ Privacy & Information</h2>
+
+      <p>
+        We aim to collect and use only information that is reasonably
+        required to provide billing, payment, customer support, and
+        related services.
+      </p>
+
+      <p>
+        Payment information may be processed by the third-party
+        payment provider used during checkout. Customers should
+        review the applicable payment provider's own privacy and
+        security policies for information about how payment data is
+        processed.
+      </p>
+
+      <p>
+        We do not request sensitive banking credentials such as UPI
+        PINs, OTPs, passwords, or full card security information through
+        customer support channels.
+      </p>
+
+    </section>
+
+
+    <!-- POLICIES -->
+
+    <section class="card">
+
+      <h2>📄 Policies & Legal Information</h2>
+
+      <p>
+        Please review our policies before completing a transaction.
+        These documents explain the applicable terms, privacy
+        practices, and refund/cancellation conditions.
+      </p>
+
+      <div class="policy-links">
+
+        <a href="/terms.html">
+          Terms & Conditions
+        </a>
+
+        <a href="/privacy.html">
+          Privacy Policy
+        </a>
+
+        <a href="/refund.html">
+          Refund Policy
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- SUPPORT HOURS -->
+
+    <section class="card">
+
+      <h2>📞 Customer Support</h2>
+
+      <p>
+        For billing and payment-related questions, please contact us
+        through email or Telegram.
+      </p>
+
+      <p>
+        When contacting support, avoid sending passwords, OTPs,
+        UPI PINs, CVVs, or complete card details.
+      </p>
+
+      <p>
+        For faster assistance with a transaction issue, you may
+        provide the relevant payment reference or transaction ID
+        without sharing confidential authentication information.
+      </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+      <p>
+        © 2026 LORD ZORO. All rights reserved.
+      </p>
+
+      <a href="/" class="back">
+        ← Back to LORD ZORO Billing
+      </a>
+
+    </footer>
+
+  </main>
+
+</body>
+</html>
+```
