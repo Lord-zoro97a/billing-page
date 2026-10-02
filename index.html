@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08050d">
+  <meta name="description" content="Official LORD ZORO support and payment page.">
+  <title>LORD ZORO . — Official Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="#support">Support</a>
+      <a href="#payment">Payment</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="refund.html">Refund</a>
+      <a href="https://t.me/LORD_X_ZORO" target="_blank" rel="noopener noreferrer">Telegram</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero">
+      <div class="logo-ring">
+        <div class="logo-orbit"></div>
+        <img src="https://i.postimg.cc/sXwznX8k/cropped-circle-image.png" alt="LORD ZORO logo" class="logo">
+      </div>
+      <h1>LORD ZORO <span>.</span></h1>
+      <div class="official">OFFICIAL SUPPORT</div>
+      <a class="telegram-badge" href="https://t.me/LORD_X_ZORO" target="_blank" rel="noopener noreferrer">
+        <span class="telegram-icon">✈</span><span>@LORD_X_ZORO</span>
+      </a>
+      <h2>Support Lord Zoro</h2>
+      <p>Fuel the grind, power the streams &amp; keep the content alive.</p>
+    </section>
+
+    <section class="card" id="support">
+      <div class="section-heading"><span>⚡</span><h2>Choose Support Amount</h2></div>
+      <div class="amount-grid" id="amountGrid">
+        <button type="button" class="amount-btn active" data-amount="50">₹50</button>
+        <button type="button" class="amount-btn" data-amount="100">₹100</button>
+        <button type="button" class="amount-btn" data-amount="250">₹250</button>
+        <button type="button" class="amount-btn" data-amount="500">₹500</button>
+        <button type="button" class="amount-btn" data-amount="1000">₹1000</button>
+      </div>
+      <div class="field">
+        <label for="customAmount">Custom amount</label>
+        <div class="input-wrap amount-input-wrap">
+          <span class="input-prefix">₹</span>
+          <input id="customAmount" type="number" inputmode="decimal" min="1" max="100000" step="1" placeholder="Enter amount" autocomplete="off">
+        </div>
+        <small class="field-help">Minimum ₹1 · Maximum ₹1,00,000</small>
+      </div>
+    </section>
+
+    <section class="card" id="payment">
+      <div class="section-heading"><span>📄</span><h2>Payment &amp; Receipt Confirmation</h2></div>
+      <form id="paymentForm" novalidate>
+        <div class="field">
+          <label for="name">Name / Gamertag <span class="required">*</span></label>
+          <input id="name" name="name" type="text" maxlength="80" placeholder="Enter your name or gamertag" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="displayAmount">Amount</label>
+          <input id="displayAmount" type="text" value="₹50" readonly>
+        </div>
+        <div class="gateway-row">
+          <div class="gateway-logo">R</div>
+          <div class="gateway-copy"><strong>Razorpay</strong><span>UPI, Cards</span></div>
+          <div class="gateway-check">✓</div>
+        </div>
+        <div class="field">
+          <label for="note">Note <span class="optional">(optional)</span></label>
+          <textarea id="note" name="note" maxlength="500" rows="4" placeholder="Add a message for LORD ZORO..."></textarea>
+        </div>
+        <button type="submit" class="pay-btn" id="payBtn">💳 Pay ₹50 with Razorpay</button>
+        <div class="secure-note"><span>🔒</span><span>Secure payment powered by Razorpay</span></div>
+        <div class="status" id="status" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <section class="trust-card">
+      <div class="trust-item"><span>⚡</span><div><strong>Fast checkout</strong><small>Complete payment securely</small></div></div>
+      <div class="trust-item"><span>🛡️</span><div><strong>Secure gateway</strong><small>Payments handled by Razorpay</small></div></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="refund.html">Refund</a>
+      <a href="https://t.me/LORD_X_ZORO" target="_blank" rel="noopener noreferrer">Contact</a>
+    </div>
+    <p>© 2026 LORD ZORO. All rights reserved.</p>
+  </footer>
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
