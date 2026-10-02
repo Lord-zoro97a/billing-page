@@ -1,4 +1,4 @@
-var RAZORPAY_KEY_ID = "rzp_test_XXXXXXXXXXXX";
+var RAZORPAY_KEY_ID = "rzp_test_TEp8zhyxriqYwA";
 
 (function () {
   "use strict";
